@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class D_2020_1 {
     public static String solve(Scanner sc)
     {
+        // Taking input
         int N = sc.nextInt();
         int[] V = new int[N];
 
@@ -12,8 +13,9 @@ public class D_2020_1 {
         }
 
         int count = 0;
-        int maxV = -1;
+        int maxV = -1; // We can't initialize max-visitors to be 0 since {0} is a possible input
 
+        // Just iterate over the input and check the conditions for a record breaking day
         for (int i = 0; i < N; i++)
         {
             if (V[i] > maxV && (i == N - 1 || V[i + 1] < V[i]))

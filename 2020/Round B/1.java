@@ -4,6 +4,7 @@ public class B_2020_1 {
 
     public static String solve(Scanner sc)
     {
+        // Taking input
         int N = sc.nextInt();
         int[] H = new int[N];
         for (int i = 0; i < N; i++)
@@ -11,6 +12,7 @@ public class B_2020_1 {
             H[i] = sc.nextInt();
         }
 
+        // Just iterate over the heights and check for peak conditions
         int peaks = 0;
         for (int i = 1; i < N - 1; i++)
         {

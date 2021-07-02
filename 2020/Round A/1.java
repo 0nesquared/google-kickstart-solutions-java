@@ -4,6 +4,7 @@ public class A_2020_1 {
 
     public static String solve(Scanner sc)
     {
+        // Taking input
         int N = sc.nextInt();
         int B = sc.nextInt();
 
@@ -13,8 +14,11 @@ public class A_2020_1 {
             A[i] = sc.nextInt();
         }
 
+        // Sorting the array in Ascending order
         Arrays.sort(A);
 
+        // Greedy approach - Pick the cheapest house, and decrement the budget accordingly
+        // The maximum houses selected this way would be our answer
         int count = 0;
         for (int i = 0; i < N && B > 0; i++)
         {

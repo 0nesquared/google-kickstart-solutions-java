@@ -9,9 +9,13 @@ public class G_2020_1 {
         int firstKick = S.indexOf("KICK");
         int lastStart = S.lastIndexOf("START");
 
+        // Eliminating the case when no 'KICKSTART' is possible
         if (firstKick > lastStart)
             return String.valueOf(0);
 
+        // Iterating over the string, and collecting the KICKSTARTs formed in the count variable
+        // Whenever we encounter a 'KICK', we increment the kickCounter
+        // Whenever we encounter a 'START', we increment count by the kickCounter, since that many KICKSTARTs are possible upto that encounter
         int kickCounter = 0;
         for (int i = 0; i < S.length(); i++)
         {

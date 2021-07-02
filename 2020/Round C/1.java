@@ -4,6 +4,7 @@ public class C_2020_1 {
 
     public static String solve(Scanner sc)
     {
+        // Taking input
         int N = sc.nextInt();
         int K = sc.nextInt();
         int[] A = new int[N];
@@ -16,14 +17,16 @@ public class C_2020_1 {
 
         for (int i = 0; i < N; i++)
         {
+            // Condition for an element to start a K-countdown
             if (A[i] == K)
             {
                 int start = i++;
+                // Incrementing i as long as the conditions of the countdown are met
                 while (i < N && (A[i - 1] - A[i] == 1))
                     i++;
-                if (i - start == K)
+                if (i - start == K) // Checking if our count-down is a K-countdown
                     count++;
-                i--;
+                i--; // Re-adjusting the index overshot by the while loop
             }
         }
 

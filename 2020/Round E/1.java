@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class E_2020_1 {
     public static String solve(Scanner sc)
     {
+        // Taking input
         int N = sc.nextInt();
         int[] A = new int[N];
 
@@ -11,6 +12,7 @@ public class E_2020_1 {
             A[i] = sc.nextInt();
         }
 
+        // Iterate over the input and record the lengths of the different APs formed
         int lengthMax = 0;
         for (int i = 0; i < N - 1;)
         {
